@@ -1,4 +1,32 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createStore } from 'vuex'
+import { createRouter, createWebHistory } from 'vue-router'
 
-createApp(App).mount('#app')
+import HomeView from "./views/HomeView"
+import LoginView from "./views/LoginView"
+
+
+const store = createStore({
+    state(){
+        return{
+            tervitus:"Tere tere vana kere :>"
+        }
+    }
+});
+// router routes
+const routes = [
+    {path: '/',name: 'home', component: HomeView},
+    {path: '/login', name:'Login', component: LoginView}
+];
+
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
+
+
+const app = createApp(App)
+app.use(store)
+app.use(router)
+app.mount('#app')
