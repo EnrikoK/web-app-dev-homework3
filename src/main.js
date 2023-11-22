@@ -9,10 +9,9 @@ import SignupView from "./views/SignupView"
 
 
 const store = createStore({
-    state(){
-        return{
-            tervitus:"Tere tere vana kere :>"
-        }
+    state:{
+        tervitus:"Tere tere vana kere :>"
+        
     }
 });
 // router routes

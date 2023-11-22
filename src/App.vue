@@ -1,29 +1,21 @@
 <template>
-  <header>
-    <nav>
-    <ul>
-        <li>
-          <RouterLink class="router-text" to="/">Home</RouterLink>
-        </li>
-        <li>
-          <RouterLink class="router-text" to="/login">Login</RouterLink>
-        </li>
-        <li>
-          <RouterLink class="router-text" to="/signup">Sign up</RouterLink>
-        </li>
-      </ul>
-    </nav>  
-  </header>
-  <RouterView></RouterView>
+<header-component/>
+<RouterView class="content-area"></RouterView>
+<footer-component></footer-component>
 </template>
 
 <script>
-
+import FooterComponent from './components/FooterComponent.vue';
+import HeaderComponent from './components/HeaderComponent.vue';
 export default {
   name: 'App',
   components: {
+    'header-component':HeaderComponent,
+    'footer-component':FooterComponent,
     
-  }
+    
+  },
+
 }
 </script>
 
@@ -56,5 +48,11 @@ nav{
 .router-text{
   color: whitesmoke;
   font-size: 1.5em;
+}
+.content-area{
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

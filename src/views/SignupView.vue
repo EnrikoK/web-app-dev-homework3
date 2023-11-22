@@ -1,14 +1,21 @@
 <template>
-<h1>
-    signup
-</h1>
+<div>
+    <h2>Create an account here!</h2>   
+    <signup-component></signup-component>
+</div>
+
+
 </template>
 
 <script>
+import SingupComponent from "../components/SignupComponent.vue"
 export default{
-    name:'SignupView'
+    name:'SignupView',
+    components:{
+        'signup-component':SingupComponent,
+    }
 }
 </script>
 
-<style>
+<style scoped>
 </style>

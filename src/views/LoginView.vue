@@ -4,7 +4,13 @@
 
 <script>
 export default{
-    name:'LoginView'
+    name:'LoginView',
+    data: function(){
+        return{
+
+        }
+    },
+
 }
 </script>
 
