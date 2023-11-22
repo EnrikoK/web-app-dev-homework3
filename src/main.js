@@ -5,6 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import HomeView from "./views/HomeView"
 import LoginView from "./views/LoginView"
+import SignupView from "./views/SignupView"
 
 
 const store = createStore({
@@ -17,7 +18,8 @@ const store = createStore({
 // router routes
 const routes = [
     {path: '/',name: 'home', component: HomeView},
-    {path: '/login', name:'Login', component: LoginView}
+    {path: '/login', name:'login', component: LoginView},
+    {path: '/signup', name:'signup', component: SignupView}
 ];
 
 const router = createRouter({

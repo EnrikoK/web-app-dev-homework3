@@ -8,6 +8,9 @@
         <li>
           <RouterLink class="router-text" to="/login">Login</RouterLink>
         </li>
+        <li>
+          <RouterLink class="router-text" to="/signup">Sign up</RouterLink>
+        </li>
       </ul>
     </nav>  
   </header>

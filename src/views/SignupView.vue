@@ -1,10 +1,12 @@
 <template>
-<h1>{{ $store.state.tervitus }}</h1>
+<h1>
+    signup
+</h1>
 </template>
 
 <script>
 export default{
-    name:'LoginView'
+    name:'SignupView'
 }
 </script>
 
