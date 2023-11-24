@@ -12,7 +12,7 @@ const store = createStore({
     state:{
         tervitus:"Tere tere vana kere :>",
         posts: [
-            {id: 0, text: "this is my first post ever. very excited.", image: "assets/photo2.jpg"}
+            {id: 0, text: "this is my first post ever. very excited.", image: "assets/photo2.jpg", likes: 0}
         ]
     },
     getters: {

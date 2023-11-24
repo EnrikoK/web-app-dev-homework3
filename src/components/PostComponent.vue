@@ -2,7 +2,7 @@
     <div class="post">
         <div v-for="post in getPosts" :key="post.id">
             <h3>{{ post.text }}</h3>
-            <img src= {{ post.image }}>
+            <img src= {{post.image}}>
         </div>
     </div>
 </template>
