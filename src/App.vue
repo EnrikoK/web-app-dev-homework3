@@ -7,6 +7,7 @@
 <script>
 import FooterComponent from './components/FooterComponent.vue';
 import HeaderComponent from './components/HeaderComponent.vue';
+
 export default {
   name: 'App',
   components: {
@@ -15,6 +16,11 @@ export default {
     
     
   },
+  computed: {
+    posts() {
+      return this.$store.state.posts;
+    }
+  }
 
 }
 </script>
