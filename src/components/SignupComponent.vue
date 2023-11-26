@@ -43,7 +43,7 @@ export default{
             return
         }
         //checking lowercase and numeric values in password via regex
-        let lowercase = /[a-z]{2,}/;
+        let lowercase = /[a-z].*[a-z]/;
         let numeric = /[1-9]+/;
         if(!lowercase.test(this.passwordInp)){
             this.isError=true;

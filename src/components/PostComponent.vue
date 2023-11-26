@@ -1,12 +1,12 @@
 <template>
     <div class="posts-container">
         <div class="content" v-for="post in getPosts" :key="post.id">
-            <div>
+            <div class="post-header">
                 <h4 class="username">{{post.user}}</h4>
                 <p class="date">{{post.date}}</p>
             </div>
-            <div>
-                <p>{{ post.text }}</p>
+            <div class="post-body">
+                <p v-if="post.text!=null">{{ post.text }}</p>
                 <img v-if="post.image!=null" :src="post.image">
                
             </div>
@@ -80,5 +80,10 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.post-body p {
+    text-align: left;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 </style>
